@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+<html ng-app = 'target'>
+<head>
+	<title>Hello World!</title>
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script>
+var app = angular.module("target", []);
+app.controller("helloCtrl", function($scope) {
+  $scope.name = "";
+  $scope.helloFun = function () {
+      $scope.myTxt = "Hello World!";
+  }
+  $scope.fname = "";
+});
+</script>
+    <style>
+        p, h4
+        {
+            color:cornflowerblue;
+            text-align: left;
+        }
+        ol{
+            color:cornflowerblue;
+        }
+        h5{
+            color:blue;
+        }
+        
+    </style>
+</head>
+<body ng-app="target" ng-controller="helloCtrl">
+
+<form ng-submit="helloFun()">
+  <input type="text" placeholder="Click on submit button" ng-model="name">
+  <input type="submit">
+</form>
+
+<p>{{myTxt}}</p>
+    <p>The testing frame works used in Angular js are:</p>
+    <ol>
+        <li>Karma</li>
+        <li>Jasmine</li>
+    </ol>
+    <h4>Below is an example of 2 way data binding</h4>
+    
+    <input type= "text" name="fname" ng-model="fname">
+    <h5>{{fname}}</h5>
+
+</body>
+</html>
