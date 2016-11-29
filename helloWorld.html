@@ -15,10 +15,11 @@ app.controller("helloCtrl", function($scope) {
 });
 </script>
     <style>
-        p, h4
+        p, h4, h3
         {
             color:cornflowerblue;
             text-align: left;
+            font-family: "Georgia";
         }
         ol{
             color:cornflowerblue;
@@ -30,9 +31,9 @@ app.controller("helloCtrl", function($scope) {
     </style>
 </head>
 <body ng-app="target" ng-controller="helloCtrl">
-
+<h3> Hello World!</h3>
 <form ng-submit="helloFun()">
-  <input type="text" placeholder="Click on submit button" ng-model="name">
+  <input type="text" placeholder="Click on submit button">
   <input type="submit">
 </form>
 
