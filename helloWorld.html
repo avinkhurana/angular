@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app = 'target'>
+<head>
+	<title>Hello World!</title>
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script>
+var app = angular.module("target", []);
+app.controller("myCtrl", function($scope) {
+  $scope.myTxt = "You have not yet clicked submit";
+  $scope.myFunc = function () {
+      $scope.myTxt = "Hello World!";
+  }
+});
+</script>
+</head>
+<body ng-app="target" ng-controller="myCtrl">
+
+<form ng-submit="myFunc()">
+  <input type="text" placeholder="Click on submit button">
+  <input type="submit">
+</form>
+
+<p>{{myTxt}}</p>
+
+</body>
+</html>
